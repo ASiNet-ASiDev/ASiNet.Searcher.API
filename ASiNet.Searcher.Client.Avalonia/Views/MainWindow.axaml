@@ -1,0 +1,74 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ASiNet.Searcher.Client.Avalonia.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Width="{Binding Width}" Height="{Binding Height}"
+        x:Class="ASiNet.Searcher.Client.Avalonia.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+		WindowStartupLocation="CenterScreen"
+		ExtendClientAreaToDecorationsHint="True"
+		ExtendClientAreaChromeHints="NoChrome"
+		ExtendClientAreaTitleBarHeightHint="-1"
+		TransparencyBackgroundFallback="#333333"
+		TransparencyLevelHint="Blur"
+		Background="{x:Null}"
+		BorderBrush="{x:Null}"
+		CanResize="False"
+		x:DataType="vm:MainWindowViewModel">
+
+	<Window.Styles>
+		<Style Selector="TextBox.input /template/ Border">
+			<Setter Property="Background" Value="{x:Null}"/>
+			<Setter Property="BorderBrush" Value="{x:Null}"/>
+			<Setter Property="BorderThickness" Value="0"/>
+		</Style>
+	</Window.Styles>
+
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<TextBox Classes="input" 
+				 x:Name="InputBox"
+				 KeyDown="OnTextBoxKeyDown"
+				 Foreground="White"
+			     Text="{Binding Input}"
+				 Watermark="Enter: File path or Url Addres"
+				 FontSize="20"
+				 VerticalAlignment="Center"/>
+		<Grid Grid.Row="1">
+			<ScrollViewer x:Name="ResultScrollViewer" HorizontalScrollBarVisibility="Disabled">
+				<ItemsControl Items="{Binding Items}">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<Border Height="20"
+									Margin="0,5,0,0"
+									CornerRadius="5"
+									Background="{Binding BacgroundColor}">
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="30"/>
+										<ColumnDefinition/>
+									</Grid.ColumnDefinitions>
+									<TextBlock Grid.Column="0"
+											   Text="{Binding Icon}"
+											   TextAlignment="Center"
+											   Foreground="White"
+											   FontFamily="/Assets/Fonts/themify.ttf#themify"/>
+									<TextBlock Grid.Column="1"
+											   Text="{Binding Path}"
+											   Foreground="White"/>
+								</Grid>
+							</Border>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
+			</ScrollViewer>
+		</Grid>
+	</Grid>
+</Window>

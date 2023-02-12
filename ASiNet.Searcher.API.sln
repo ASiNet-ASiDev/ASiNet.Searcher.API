@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33402.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASiNet.Searcher.API", "ASiNet.Searcher.API\ASiNet.Searcher.API.csproj", "{B0B8FC11-B172-48B9-B366-218E07580A07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{5C1E2B5D-CF62-40E7-9A3C-3655A839FCA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASiNet.Searcher.Client.Avalonia", "ASiNet.Searcher.Client.Avalonia\ASiNet.Searcher.Client.Avalonia.csproj", "{6B47681C-9378-4E91-B0EA-310E344FDA0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0B8FC11-B172-48B9-B366-218E07580A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B8FC11-B172-48B9-B366-218E07580A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B8FC11-B172-48B9-B366-218E07580A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B8FC11-B172-48B9-B366-218E07580A07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B47681C-9378-4E91-B0EA-310E344FDA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B47681C-9378-4E91-B0EA-310E344FDA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B47681C-9378-4E91-B0EA-310E344FDA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B47681C-9378-4E91-B0EA-310E344FDA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0B8FC11-B172-48B9-B366-218E07580A07} = {5C1E2B5D-CF62-40E7-9A3C-3655A839FCA3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3628807B-C51F-4380-B9F6-97B6EB5946EE}
+	EndGlobalSection
+EndGlobal
